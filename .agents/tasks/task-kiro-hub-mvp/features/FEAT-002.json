@@ -2,7 +2,7 @@
   "id": "FEAT-002",
   "type": "feat",
   "description": "Build the shared layout components (Header navigation with mobile menu and Footer) and the Home/Landing page with hero section, feature highlights, community statistics, testimonials, and CTAs.",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Create components/layout/header.tsx - 'use client' component with responsive navigation bar. Include: Kiro Hub logo/text, nav links (Home, About, Features, How It Works, Tutorials, Community, Resources), mobile hamburger menu using state, theme toggle button (dark/light), search placeholder button. Use semantic HTML (header, nav elements). Make fully responsive with mobile menu. Add keyboard navigation support and aria labels. Use framer-motion for mobile menu animation with prefers-reduced-motion respect.",
     "Create components/layout/footer.tsx - Server component with semantic footer element. Include: Kiro Hub branding, navigation links organized in columns (Product, Learn, Community, Resources), social media icon links (GitHub, Twitter/X, Discord), copyright notice, accessibility statement link. Use responsive grid layout.",
