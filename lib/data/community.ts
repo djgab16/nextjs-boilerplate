@@ -34,12 +34,22 @@ export interface VolunteerOpportunity {
   skills: string[];
 }
 
+/**
+ * Helper to generate a future date string (YYYY-MM-DD) relative to today.
+ * @param daysFromNow - number of days from today
+ */
+function getFutureDate(daysFromNow: number): string {
+  const date = new Date();
+  date.setDate(date.getDate() + daysFromNow);
+  return date.toISOString().split("T")[0];
+}
+
 export const events: CommunityEvent[] = [
   {
     id: "1",
     title: "Kiro Build Night: AI-Powered Web Apps",
     type: "Build Night",
-    date: "2025-02-15",
+    date: getFutureDate(14),
     time: "6:00 PM - 9:00 PM EST",
     description:
       "Join us for an evening of hands-on building with Kiro. We will be creating AI-powered web applications from scratch using specification-driven development.",
@@ -50,7 +60,7 @@ export const events: CommunityEvent[] = [
     id: "2",
     title: "Workshop: Specification-Driven Development",
     type: "Workshop",
-    date: "2025-02-22",
+    date: getFutureDate(21),
     time: "2:00 PM - 5:00 PM EST",
     description:
       "Learn how to write specifications that Kiro can transform into production-ready code. Interactive session with live coding examples.",
@@ -61,7 +71,7 @@ export const events: CommunityEvent[] = [
     id: "3",
     title: "Kiro Build Night: CLI Tools",
     type: "Build Night",
-    date: "2025-03-01",
+    date: getFutureDate(30),
     time: "6:00 PM - 9:00 PM EST",
     description:
       "Build powerful command-line tools with Kiro. From argument parsing to interactive prompts, we will explore the full CLI development workflow.",
@@ -72,7 +82,7 @@ export const events: CommunityEvent[] = [
     id: "4",
     title: "Workshop: GitHub Integration Mastery",
     type: "Workshop",
-    date: "2025-03-08",
+    date: getFutureDate(37),
     time: "1:00 PM - 4:00 PM EST",
     description:
       "Deep dive into Kiro's GitHub integration. Learn automated PR workflows, code review automation, and branch management strategies.",
@@ -83,7 +93,7 @@ export const events: CommunityEvent[] = [
     id: "5",
     title: "Community Meetup: Show & Tell",
     type: "Meetup",
-    date: "2025-03-15",
+    date: getFutureDate(45),
     time: "5:00 PM - 7:00 PM EST",
     description:
       "Share what you have built with Kiro! Community members present their projects, share tips, and discuss best practices.",

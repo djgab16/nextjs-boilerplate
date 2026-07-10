@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { FeaturesContent } from "@/components/features/features-content";
 
 export const metadata: Metadata = {
-  title: "Features | Kiro Hub",
+  title: "Features",
   description:
     "Explore Kiro's powerful features including AI specifications, autonomous development, task planning, GitHub integration, and more.",
 };

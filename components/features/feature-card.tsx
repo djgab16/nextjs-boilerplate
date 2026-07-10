@@ -34,8 +34,6 @@ export function FeatureCard({
           ? undefined
           : { y: -4, transition: { duration: 0.2 } }
       }
-      tabIndex={0}
-      role="article"
       aria-label={title}
     >
       <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform group-hover:scale-110">

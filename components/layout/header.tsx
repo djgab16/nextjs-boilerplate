@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X, Sun, Moon, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useSearch } from "@/components/search-context";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,20 +18,12 @@ const navLinks = [
   { href: "/resources", label: "Resources" },
 ];
 
-function triggerSearch() {
-  const event = new KeyboardEvent("keydown", {
-    key: "k",
-    ctrlKey: true,
-    bubbles: true,
-  });
-  document.dispatchEvent(event);
-}
-
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const { setOpen: setSearchOpen } = useSearch();
 
   React.useEffect(() => {
     setMounted(true);
@@ -85,7 +78,7 @@ export function Header() {
             variant="ghost"
             size="icon"
             aria-label="Search (Ctrl+K)"
-            onClick={triggerSearch}
+            onClick={() => setSearchOpen(true)}
             className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Search className="h-5 w-5" />
@@ -111,7 +104,7 @@ export function Header() {
             variant="ghost"
             size="icon"
             aria-label="Search (Ctrl+K)"
-            onClick={triggerSearch}
+            onClick={() => setSearchOpen(true)}
             className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Search className="h-5 w-5" />

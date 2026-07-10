@@ -23,7 +23,7 @@ import {
 } from "@/lib/data/community";
 
 export const metadata: Metadata = {
-  title: "Community | Kiro Hub",
+  title: "Community",
   description:
     "Join the Kiro community. Attend Build Nights, workshops, and meetups. Connect with speakers, partners, and volunteer opportunities.",
 };

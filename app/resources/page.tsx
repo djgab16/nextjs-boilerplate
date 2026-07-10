@@ -32,7 +32,7 @@ import {
 import { FaqSection } from "@/components/resources/faq-section";
 
 export const metadata: Metadata = {
-  title: "Resources | Kiro Hub",
+  title: "Resources",
   description:
     "Access Kiro documentation, cheat sheets, templates, GitHub examples, video tutorials, and frequently asked questions.",
 };

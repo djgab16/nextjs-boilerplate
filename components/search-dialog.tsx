@@ -3,9 +3,10 @@
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Search, X } from "lucide-react";
+import { useSearch } from "@/components/search-context";
 
 export function SearchDialog() {
-  const [open, setOpen] = React.useState(false);
+  const { open, setOpen } = useSearch();
 
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -16,7 +17,7 @@ export function SearchDialog() {
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [setOpen]);
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -60,19 +61,4 @@ export function SearchDialog() {
       </Dialog.Portal>
     </Dialog.Root>
   );
-}
-
-/** Hook to trigger the search dialog from other components */
-export function useSearchTrigger() {
-  const trigger = React.useCallback(() => {
-    // Dispatch a keyboard event to open search
-    const event = new KeyboardEvent("keydown", {
-      key: "k",
-      ctrlKey: true,
-      bubbles: true,
-    });
-    document.dispatchEvent(event);
-  }, []);
-
-  return trigger;
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { TutorialsContent } from "@/components/tutorials/tutorials-content";
 
 export const metadata: Metadata = {
-  title: "Tutorials | Kiro Hub",
+  title: "Tutorials",
   description:
     "Learn Kiro through hands-on tutorials categorized by difficulty. From beginner basics to advanced specification patterns.",
 };

@@ -159,13 +159,13 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Link
-              href="/accessibility"
+              href="#"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             >
               Accessibility
             </Link>
             <Link
-              href="/privacy"
+              href="#"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             >
               Privacy
