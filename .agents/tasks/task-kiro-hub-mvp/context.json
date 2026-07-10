@@ -1,0 +1,25 @@
+{
+  "project_type": "Next.js 16.2.4 App Router with React 19, TypeScript, Tailwind CSS 4",
+  "language": "TypeScript/TSX",
+  "build_system": "bun (npm not available in sandbox). Uses bun install and bun run build. Bun 1.2.14 is available. Some worker_threads warnings appear during build but do not affect compilation.",
+  "test_framework": "No test framework configured. Verification is via successful build (bun run build).",
+  "build_command": "bun run build",
+  "test_command": "bun run build",
+  "verification_instructions": "Run 'bun run build' in /projects/sandbox/nextjs-boilerplate and confirm it compiles successfully with all routes listed.",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/nextjs-boilerplate && bun install",
+  "environment_constraints": "npm is not available - use bun instead. Bun 1.2.14 is installed via mise. Network is OPEN_INTERNET so all package installs work. No Docker needed. worker_threads warnings from Next.js build are non-fatal.",
+  "contribution_requirements": "AGENTS.md says to read node_modules/next/dist/docs/ before writing code. Key findings: App Router uses file-system routing, layouts/pages pattern, Server Components by default with 'use client' directive for interactive components, metadata via exported Metadata objects, Tailwind CSS 4 with @import 'tailwindcss' pattern.",
+  "key_patterns": "App Router file conventions: app/page.tsx for pages, app/layout.tsx for layouts, nested folders for routes. Server Components by default - add 'use client' directive for components using state/effects/browser APIs. Metadata exported as static objects or generateMetadata functions. Tailwind CSS 4 setup already working with @tailwindcss/postcss plugin. Path alias @/* maps to project root. Geist font family configured with CSS variables.",
+  "relevant_files": [
+    "app/layout.tsx",
+    "app/page.tsx",
+    "app/globals.css",
+    "package.json",
+    "tsconfig.json",
+    "next.config.ts",
+    "postcss.config.mjs",
+    "tailwind.config.ts (to be created if needed)"
+  ],
+  "directory_structure": "/ - project root with config files. /app - App Router pages and layouts. /public - static assets. /node_modules/next/dist/docs/ - Next.js documentation to reference."
+}

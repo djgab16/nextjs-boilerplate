@@ -1,0 +1,7 @@
+{
+  "task_id": "task-kiro-hub-mvp",
+  "task_description": "Build the Kiro Hub MVP - a modern, community-driven educational platform for developers to learn and adopt Kiro. Implements 7 pages (Home, About, Features, How It Works, Tutorials, Community, Resources) with shared navigation, dark/light theme, animations, accessibility, SEO, and AI placeholder UI.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003", "FEAT-004", "FEAT-005"],
+  "blocked_reason": null
+}

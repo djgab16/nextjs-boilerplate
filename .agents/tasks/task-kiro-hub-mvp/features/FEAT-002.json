@@ -1,0 +1,31 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Build the shared layout components (Header navigation with mobile menu and Footer) and the Home/Landing page with hero section, feature highlights, community statistics, testimonials, and CTAs.",
+  "status": "pending",
+  "steps": [
+    "Create components/layout/header.tsx - 'use client' component with responsive navigation bar. Include: Kiro Hub logo/text, nav links (Home, About, Features, How It Works, Tutorials, Community, Resources), mobile hamburger menu using state, theme toggle button (dark/light), search placeholder button. Use semantic HTML (header, nav elements). Make fully responsive with mobile menu. Add keyboard navigation support and aria labels. Use framer-motion for mobile menu animation with prefers-reduced-motion respect.",
+    "Create components/layout/footer.tsx - Server component with semantic footer element. Include: Kiro Hub branding, navigation links organized in columns (Product, Learn, Community, Resources), social media icon links (GitHub, Twitter/X, Discord), copyright notice, accessibility statement link. Use responsive grid layout.",
+    "Create components/layout/mobile-nav.tsx if needed for extracted mobile navigation logic",
+    "Update app/layout.tsx to include Header and Footer components wrapping {children} in a main element",
+    "Create app/page.tsx - The Home/Landing page with these sections: (1) Hero section with animated gradient background using framer-motion, headline 'Build Smarter with Kiro', subheadline about AI-native IDE, two CTA buttons (Get Started, Learn More), (2) Product overview section with brief Kiro description, (3) Feature highlights - 6 key features in responsive grid with icons from lucide-react, (4) Community statistics section showing numbers (developers, projects, contributions, etc.), (5) Testimonials section with 3 developer testimonials in cards, (6) Final CTA section. All sections use semantic HTML (section, article elements). All animations respect prefers-reduced-motion via framer-motion's useReducedMotion or media query. Mobile-first responsive design throughout.",
+    "Create components/home/hero-section.tsx - 'use client' for animations",
+    "Create components/home/feature-highlights.tsx - Can be server component with animated cards as client sub-components",
+    "Create components/home/stats-section.tsx - Community statistics with counter animations",
+    "Create components/home/testimonials-section.tsx - Testimonial cards",
+    "Create components/home/cta-section.tsx - Final call to action",
+    "Run bun run build to verify"
+  ],
+  "acceptance_criteria": [
+    "bun run build succeeds",
+    "Header renders with all navigation links and is responsive",
+    "Footer renders with organized link columns",
+    "Home page has hero, features, stats, testimonials, and CTA sections",
+    "All sections use semantic HTML elements",
+    "Animations use framer-motion with reduced-motion support",
+    "Mobile navigation works with hamburger menu"
+  ],
+  "verification": ["Run 'bun run build' and confirm successful compilation with / route listed"],
+  "blocked_reason": null,
+  "findings": ""
+}

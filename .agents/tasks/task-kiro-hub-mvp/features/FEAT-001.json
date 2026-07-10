@@ -1,0 +1,28 @@
+{
+  "id": "FEAT-001",
+  "type": "chore",
+  "description": "Install all dependencies, set up shadcn/ui with Tailwind CSS 4 compatibility, configure the project for framer-motion, lucide-react, and theme support. Establish the shared component foundation.",
+  "status": "in_progress",
+  "steps": [
+    "Install production dependencies: framer-motion, lucide-react, clsx, tailwind-merge, class-variance-authority, @radix-ui/react-slot, @radix-ui/react-dialog, @radix-ui/react-tabs, @radix-ui/react-accordion, @radix-ui/react-navigation-menu, @radix-ui/react-dropdown-menu, next-themes",
+    "Create lib/utils.ts with cn() utility function combining clsx and tailwind-merge",
+    "Create components/ui/button.tsx - shadcn-style Button component with variants using class-variance-authority",
+    "Create components/ui/card.tsx - shadcn-style Card component",
+    "Create components/ui/badge.tsx - shadcn-style Badge component",
+    "Create components/ui/tabs.tsx - shadcn-style Tabs component using @radix-ui/react-tabs",
+    "Create components/ui/accordion.tsx - shadcn-style Accordion component using @radix-ui/react-accordion",
+    "Create components/theme-provider.tsx - 'use client' component wrapping next-themes ThemeProvider",
+    "Update app/globals.css to include custom CSS variables for the purple/indigo color scheme, dark mode variables, and any needed Tailwind customizations (using Tailwind CSS 4 @theme inline syntax)",
+    "Update app/layout.tsx to wrap content with ThemeProvider, add global metadata for Kiro Hub, include Inter/Geist font setup",
+    "Run bun run build to verify everything compiles"
+  ],
+  "acceptance_criteria": [
+    "bun run build succeeds with no TypeScript errors",
+    "All UI utility components exist in components/ui/",
+    "ThemeProvider is configured in layout.tsx",
+    "globals.css has purple/indigo color scheme variables for light and dark modes"
+  ],
+  "verification": ["Run 'bun run build' and confirm successful compilation"],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,32 @@
+{
+  "id": "FEAT-005",
+  "type": "feat",
+  "description": "Add AI chatbot placeholder UI, search placeholder, SEO optimization, accessibility polish, and final quality pass to ensure Lighthouse targets and WCAG 2.2 AA compliance.",
+  "status": "pending",
+  "steps": [
+    "Create components/ai-chatbot.tsx - 'use client' floating chatbot button in bottom-right corner with a chat bubble icon (lucide-react MessageCircle). On click, opens a placeholder chat panel with a message like 'AI Assistant coming soon! This feature is under development.' Use framer-motion for open/close animation. Include aria-label, proper focus management, and escape key to close.",
+    "Create components/search-dialog.tsx - 'use client' search placeholder. A modal/dialog triggered by the search button in header (or Ctrl+K). Shows a search input with placeholder text 'Search Kiro Hub...' and a message 'Search functionality coming soon.' Use @radix-ui/react-dialog for accessibility. Include keyboard shortcut listener for Ctrl+K / Cmd+K.",
+    "Add the AI chatbot component to app/layout.tsx so it appears on all pages",
+    "Wire search-dialog into the header search button",
+    "SEO: Update app/layout.tsx metadata with comprehensive SEO fields: title template, description, keywords, openGraph, twitter card, robots, manifest link. Add viewport export if needed.",
+    "SEO: Create app/sitemap.ts that exports a sitemap function returning all page URLs",
+    "SEO: Create app/robots.ts that exports robots configuration",
+    "Accessibility pass: Ensure all pages have proper heading hierarchy (single h1 per page), all images have alt text, all interactive elements have focus-visible styles (ring-2 ring-offset-2), all animations respect prefers-reduced-motion, color contrast meets WCAG AA (4.5:1 for text), skip-to-content link at top of page",
+    "Create a skip-to-content link component in the header that becomes visible on focus",
+    "Performance: Ensure images use next/image with proper sizing, add loading='lazy' where appropriate, verify no large JS bundles are created unnecessarily (keep client components minimal)",
+    "Run bun run build and verify all routes compile successfully"
+  ],
+  "acceptance_criteria": [
+    "bun run build succeeds with all 7+ routes listed",
+    "AI chatbot placeholder appears as floating button on all pages",
+    "Search dialog opens on button click and Ctrl+K",
+    "Sitemap and robots.txt are generated",
+    "All pages have proper metadata",
+    "Skip-to-content link exists and works",
+    "Focus indicators are visible on all interactive elements",
+    "Animations respect prefers-reduced-motion media query"
+  ],
+  "verification": ["Run 'bun run build' and confirm all routes compile with no errors"],
+  "blocked_reason": null,
+  "findings": ""
+}

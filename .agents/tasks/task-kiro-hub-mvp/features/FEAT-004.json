@@ -1,0 +1,30 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Implement the Tutorials, Community, and Resources pages with categorized content, sample data, and interactive elements.",
+  "status": "pending",
+  "steps": [
+    "Create lib/data/tutorials.ts - Sample tutorial data array with fields: id, title, description, difficulty (Beginner/Intermediate/Advanced), estimatedTime, progress (0-100), topics, slug. Include 6-9 sample tutorials about Kiro.",
+    "Create app/tutorials/page.tsx - Tutorials page with: (1) Page header with title and description, (2) Filter tabs by difficulty (All, Beginner, Intermediate, Advanced) using the Tabs component, (3) Tutorial cards in responsive grid showing title, description, difficulty badge, estimated time, progress indicator bar. Export metadata. Use semantic HTML.",
+    "Create components/tutorials/tutorial-card.tsx - Card component for each tutorial with difficulty badge (color-coded), progress bar, estimated time display",
+    "Create components/tutorials/difficulty-filter.tsx - 'use client' component with tab filtering logic using @radix-ui/react-tabs",
+    "Create lib/data/community.ts - Sample community data: events (Build Nights, Workshops with dates/descriptions), speakers (name, title, avatar placeholder, topic), partners (name, description, logo placeholder), volunteer opportunities (title, description, commitment level)",
+    "Create app/community/page.tsx - Community page with sections: (1) Hero with community intro, (2) Upcoming Events / Event Calendar section showing Build Nights and Workshops, (3) Speakers section with speaker cards, (4) Community Partners section, (5) Volunteer Opportunities section. Export metadata.",
+    "Create lib/data/resources.ts - Sample resources data: documentation links, cheat sheets, templates, GitHub examples, videos, FAQs (question/answer pairs, at least 5 FAQs)",
+    "Create app/resources/page.tsx - Resources page with sections: (1) Documentation links, (2) Cheat Sheets, (3) Templates, (4) GitHub Examples, (5) Videos, (6) FAQ section using Accordion component for expand/collapse. Export metadata. Use semantic HTML.",
+    "Create components/resources/faq-section.tsx - 'use client' FAQ component using @radix-ui/react-accordion with proper aria attributes",
+    "Run bun run build to verify all three new routes compile"
+  ],
+  "acceptance_criteria": [
+    "bun run build succeeds with /tutorials, /community, and /resources routes listed",
+    "Tutorials page has difficulty filter tabs and tutorial cards with progress indicators",
+    "Community page has events, speakers, partners, and volunteer sections",
+    "Resources page has documentation, cheat sheets, templates, examples, videos, and FAQ accordion",
+    "All pages have proper metadata exports",
+    "All data files provide realistic Kiro-related placeholder content",
+    "FAQ accordion is keyboard accessible"
+  ],
+  "verification": ["Run 'bun run build' and confirm /tutorials, /community, /resources routes appear"],
+  "blocked_reason": null,
+  "findings": ""
+}
