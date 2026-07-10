@@ -2,7 +2,7 @@
   "id": "FEAT-004",
   "type": "feat",
   "description": "Implement the Tutorials, Community, and Resources pages with categorized content, sample data, and interactive elements.",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Create lib/data/tutorials.ts - Sample tutorial data array with fields: id, title, description, difficulty (Beginner/Intermediate/Advanced), estimatedTime, progress (0-100), topics, slug. Include 6-9 sample tutorials about Kiro.",
     "Create app/tutorials/page.tsx - Tutorials page with: (1) Page header with title and description, (2) Filter tabs by difficulty (All, Beginner, Intermediate, Advanced) using the Tabs component, (3) Tutorial cards in responsive grid showing title, description, difficulty badge, estimated time, progress indicator bar. Export metadata. Use semantic HTML.",
