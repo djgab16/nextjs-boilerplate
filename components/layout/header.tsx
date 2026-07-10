@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X, Sun, Moon, Search } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -17,6 +16,15 @@ const navLinks = [
   { href: "/community", label: "Community" },
   { href: "/resources", label: "Resources" },
 ];
+
+function triggerSearch() {
+  const event = new KeyboardEvent("keydown", {
+    key: "k",
+    ctrlKey: true,
+    bubbles: true,
+  });
+  document.dispatchEvent(event);
+}
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -76,8 +84,9 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            aria-label="Search"
-            className="text-foreground/70 hover:text-foreground"
+            aria-label="Search (Ctrl+K)"
+            onClick={triggerSearch}
+            className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Search className="h-5 w-5" />
           </Button>
@@ -86,7 +95,7 @@ export function Header() {
             size="icon"
             onClick={toggleTheme}
             aria-label={mounted ? `Switch to ${theme === "dark" ? "light" : "dark"} theme` : "Toggle theme"}
-            className="text-foreground/70 hover:text-foreground"
+            className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {mounted && theme === "dark" ? (
               <Sun className="h-5 w-5" />
@@ -101,8 +110,9 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            aria-label="Search"
-            className="text-foreground/70 hover:text-foreground"
+            aria-label="Search (Ctrl+K)"
+            onClick={triggerSearch}
+            className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Search className="h-5 w-5" />
           </Button>
@@ -111,7 +121,7 @@ export function Header() {
             size="icon"
             onClick={toggleTheme}
             aria-label={mounted ? `Switch to ${theme === "dark" ? "light" : "dark"} theme` : "Toggle theme"}
-            className="text-foreground/70 hover:text-foreground"
+            className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {mounted && theme === "dark" ? (
               <Sun className="h-5 w-5" />
@@ -126,7 +136,7 @@ export function Header() {
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
-            className="text-foreground/70 hover:text-foreground"
+            className="text-foreground/70 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {mobileMenuOpen ? (
               <X className="h-5 w-5" />

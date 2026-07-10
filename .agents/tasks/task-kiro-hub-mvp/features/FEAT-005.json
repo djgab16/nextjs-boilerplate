@@ -2,7 +2,7 @@
   "id": "FEAT-005",
   "type": "feat",
   "description": "Add AI chatbot placeholder UI, search placeholder, SEO optimization, accessibility polish, and final quality pass to ensure Lighthouse targets and WCAG 2.2 AA compliance.",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Create components/ai-chatbot.tsx - 'use client' floating chatbot button in bottom-right corner with a chat bubble icon (lucide-react MessageCircle). On click, opens a placeholder chat panel with a message like 'AI Assistant coming soon! This feature is under development.' Use framer-motion for open/close animation. Include aria-label, proper focus management, and escape key to close.",
     "Create components/search-dialog.tsx - 'use client' search placeholder. A modal/dialog triggered by the search button in header (or Ctrl+K). Shows a search input with placeholder text 'Search Kiro Hub...' and a message 'Search functionality coming soon.' Use @radix-ui/react-dialog for accessibility. Include keyboard shortcut listener for Ctrl+K / Cmd+K.",
